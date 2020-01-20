@@ -1,7 +1,7 @@
 FROM debian:stretch-slim
 
 RUN apt-get update \
-	&& apt-get install -y --no-install-recommends \
+	&& apt-get install -y --no-install-recommends libjemalloc-dev\
 		bzip2 \
 		ca-certificates \
 		libffi-dev \
@@ -68,7 +68,7 @@ RUN set -ex \
 	\
 	&& autoconf \
 	&& gnuArch="$(dpkg-architecture --query DEB_BUILD_GNU_TYPE)" \
-	&& ./configure \
+	&& ./configure --with-jemalloc \
 		--build="$gnuArch" \
 		--disable-install-doc \
 		--enable-shared \
