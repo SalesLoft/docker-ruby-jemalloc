@@ -1,4 +1,4 @@
-FROM debian:stretch-slim
+FROM debian:buster-slim
 
 LABEL author=Salesloft
 
@@ -13,7 +13,7 @@ ENV BUNDLE_PATH=/usr/local/bundle BUNDLE_SILENCE_ROOT_WARNING=1 BUNDLE_APP_CONFI
 ENV PATH=/usr/local/bundle/bin:/usr/local/bundle/gems/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
 
 ENV OS_PACKAGES bzip2 ca-certificates procps wget ruby
-ENV BUILD_PACKAGES build-essential autoconf bison libjemalloc-dev libffi-dev libgdbm3 libgmp-dev libssl-dev libyaml-dev zlib1g-dev
+ENV BUILD_PACKAGES build-essential autoconf bison libjemalloc-dev libffi-dev libgdbm-dev libgmp-dev libreadline-dev libssl-dev libyaml-dev zlib1g-dev
 
 RUN install -d -m 775 "$GEM_HOME" /usr/local/etc /usr/src/ruby \
     && { echo 'install: --no-document'; echo 'update: --no-document';  } >> /usr/local/etc/gemrc
