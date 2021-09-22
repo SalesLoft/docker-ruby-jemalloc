@@ -1,5 +1,9 @@
 # Ruby jemalloc base image for Salesloft
 
+Custom Docker image containing a Ruby build with jemalloc. Primarily used as a base image for Melody.
+
+Note: You should not build and push this repository from a laptop. GitHub Actions will build and push using the included Docker workflow.
+
 ## Building multiple architectures
 
     docker build --platform linux/amd64 -t salesloft/ruby-jemalloc:2.5.5-buster-slim-linux-amd64 .
