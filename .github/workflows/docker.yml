@@ -26,4 +26,4 @@ jobs:
         with:
           platforms: linux/amd64,linux/arm64
           push: true
-          tags: salesloft/ruby-jemalloc:2.5.5-buster-slim
+          tags: salesloft/ruby-jemalloc:2.6.10-buster-slim
