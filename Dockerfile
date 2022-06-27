@@ -5,9 +5,9 @@ LABEL author=Salesloft
 # mostly copied from https://hub.docker.com/layers/hoteltonight/ruby-jemalloc/2.5.5-stretch-slim/images/sha256-c34c6c28f678c19d0fb2fa5fdead59589720f2c0727b6ec24fd6e713fde9e064?context=explore
 
 ENV GEM_HOME=/usr/local/bundle
-ENV RUBY_MAJOR=2.5
-ENV RUBY_VERSION=2.5.5
-ENV RUBY_DOWNLOAD_SHA256=9bf6370aaa82c284f193264cc7ca56f202171c32367deceb3599a4f354175d7d
+ENV RUBY_MAJOR=2.6
+ENV RUBY_VERSION=2.6.10
+ENV RUBY_DOWNLOAD_SHA256=0dc609f263d49c4176d5725deefc337273676395985b5e017789373e8cadf16e
 ENV RUBYGEMS_VERSION=3.0.3
 ENV BUNDLE_PATH=/usr/local/bundle BUNDLE_SILENCE_ROOT_WARNING=1 BUNDLE_APP_CONFIG=/usr/local/bundle
 ENV PATH=/usr/local/bundle/bin:/usr/local/bundle/gems/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
