@@ -2,13 +2,13 @@ FROM debian:buster-slim
 
 LABEL author=Salesloft
 
-# mostly copied from https://hub.docker.com/layers/hoteltonight/ruby-jemalloc/2.5.5-stretch-slim/images/sha256-c34c6c28f678c19d0fb2fa5fdead59589720f2c0727b6ec24fd6e713fde9e064?context=explore
+ARG RUBY_MAJOR
+ARG RUBY_VERSION
+ARG RUBY_DOWNLOAD_SHA256
+ARG RUBYGEMS_VERSION
 
+# mostly copied from https://hub.docker.com/layers/hoteltonight/ruby-jemalloc/2.5.5-stretch-slim/images/sha256-c34c6c28f678c19d0fb2fa5fdead59589720f2c0727b6ec24fd6e713fde9e064?context=explore
 ENV GEM_HOME=/usr/local/bundle
-ENV RUBY_MAJOR=2.6
-ENV RUBY_VERSION=2.6.10
-ENV RUBY_DOWNLOAD_SHA256=5fd8ded51321b88fdc9c1b4b0eb1b951d2eddbc293865da0151612c2e814c1f2
-ENV RUBYGEMS_VERSION=3.0.3.1
 ENV BUNDLE_PATH=/usr/local/bundle BUNDLE_SILENCE_ROOT_WARNING=1 BUNDLE_APP_CONFIG=/usr/local/bundle
 ENV PATH=/usr/local/bundle/bin:/usr/local/bundle/gems/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
 
