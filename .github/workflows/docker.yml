@@ -26,4 +26,9 @@ jobs:
         with:
           platforms: linux/amd64,linux/arm64
           push: true
-          tags: salesloft/ruby-jemalloc:2.5.5-buster-slim
+          tags: salesloft/ruby-jemalloc:2.6.10-buster-slim
+          build-args:
+            - RUBY_GEMS_VERSION: 3.0.3.1
+            - RUBY_MAJOR: 2.6
+            - RUBY_VERSION: 2.6.10
+            - RUBY_DOWNLOAD_SHA256: 5fd8ded51321b88fdc9c1b4b0eb1b951d2eddbc293865da0151612c2e814c1f2
